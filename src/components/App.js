@@ -1,22 +1,26 @@
-import React, { useCallback, useState } from 'react';
-import OrderList from 'components/OrderList';
-import DrinksMenu from 'components/DrinksMenu';
-import Modal from 'components/Modal';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from 'components/Header';
 import styles from './App.module.scss';
+import Search from 'components/Search';
+import News from 'pages/News';
+import Footer from 'components/Footer';
 
 const App = () => {
-  const [showModal, setShowModal] = useState(false);
-  const addNewOrder = useCallback(() => {
-    setShowModal(!showModal);
-  }, [showModal]);
-  const closeModal = useCallback(() => setShowModal(false), []);
 
   return (
     <div className={styles.App}>
-      <h1 id={styles.web_name}>DailyDrinks</h1>
-      <OrderList/>
-      <button className={styles.add_order} onClick={addNewOrder}></button>
-      {showModal && <Modal closeModal={closeModal}><DrinksMenu closeModal={closeModal}/></Modal>}
+      <BrowserRouter>
+        <Header/>
+        <div className={styles.search}><Search/></div>
+        <div className={styles.appbody}>
+          <Route path="/" component={News}/>
+          <Route exact path="/regions"/>
+          <Route exact path="/video"/>
+          <Route exact path="/tv"/>
+          <Footer/>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

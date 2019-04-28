@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  background-color: #088c7c;
+  height: 50px;
+  ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    li {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid green;
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+      &:last-child {
+        border-right: none;
+        flex: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 600px){
+    .search {
+      display: none;
+    }
+  }
+}

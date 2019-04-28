@@ -1,0 +1,25 @@
+.card {
+  border: 1px solid #c3c3c3;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  margin-top: 45px;
+  .title {
+    color: #088c7c;
+    padding: 20px 0;
+  }
+  img {
+    height: 160px;
+  }
+  .content {
+    font-size: 12px;
+    padding: 10px 0;
+    flex: 1;
+  }
+  .date {
+    margin-bottom: 15px;
+    color: #088c7c;
+    font-size: 14px;
+  }
+}

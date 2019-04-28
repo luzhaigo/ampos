@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import orderList from 'reducers/orderList';
+import news from 'reducers/news';
 
 export default combineReducers({
-  orderList: orderList,
+  news,
 });

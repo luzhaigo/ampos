@@ -1,29 +1,11 @@
 import {
-  ADD_ORDER_ITEMS,
-  UPDATE_ORDER_ITEM,
-  DELETE_ORDER_ITEM,
+  GET_NEWS,
 } from './types';
+import newApi from 'services/newsApi';
 
-export const addOrderItems = (items) => {
+export const getNews = (page) => {
   return {
-    type: ADD_ORDER_ITEMS,
-    payload: items,
+    type: GET_NEWS,
+    payload: newApi.get(`/top-headlines?category=general&page=${page}&pageSize=15`),
   }
 };
-
-export const updateOrderItemByIndex = (index, item) => {
-  return {
-    type: UPDATE_ORDER_ITEM,
-    payload: {
-      item,
-      index,
-    },
-  }
-};
-
-export const deleteOrderItemByIndex = index => {
-  return {
-    type: DELETE_ORDER_ITEM,
-    payload: index,
-  }
-}

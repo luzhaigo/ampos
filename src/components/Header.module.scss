@@ -1,0 +1,19 @@
+#header {
+  padding: 20px;
+  display: flex;
+  #logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+  }
+  .wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+}
