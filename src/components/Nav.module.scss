@@ -3,6 +3,7 @@
   display: flex;
   background-color: #088c7c;
   height: 50px;
+  z-index: 1;
   ul {
     flex: 1;
     list-style: none;
@@ -29,6 +30,7 @@
 
 @media screen and (max-width: 600px) {
   .wrapper {
+    height: initial;
     ul {
       flex-flow: column;
       li {
