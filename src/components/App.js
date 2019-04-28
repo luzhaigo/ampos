@@ -3,9 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from 'components/Header';
 import styles from './App.module.scss';
 import Search from 'components/Search';
-import News from 'pages/News';
+import News from 'pages/NewsPage';
 import Footer from 'components/Footer';
-import Home from 'pages/Home';
+import Home from 'pages/HomePage';
+import Regions from 'pages/RegionsPage';
+import Video from 'pages/VideoPage';
+import TV from 'pages/TVPage';
 
 const App = () => {
 
@@ -17,9 +20,9 @@ const App = () => {
         <div className={styles.appbody}>
           <Route exact path="/" component={Home}/>
           <Route exact path="/news" component={News}/>
-          <Route exact path="/regions"/>
-          <Route exact path="/video"/>
-          <Route exact path="/tv"/>
+          <Route exact path="/regions" component={Regions}/>
+          <Route exact path="/video" component={Video}/>
+          <Route exact path="/tv" component={TV}/>
           <Footer/>
         </div>
       </BrowserRouter>

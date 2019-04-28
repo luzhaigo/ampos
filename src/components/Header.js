@@ -16,7 +16,9 @@ const Header = () => {
         <img src={menuImg} alt="menu"/>
       </button>
       <div className={styles.wrapper}><Nav/></div>
-      <div className={styles.mobile}  style={{ 'display': showMenu ? 'flex' : 'none'}}><Nav/></div>
+      <div className={styles.mobile}  style={{ 'display': showMenu ? 'flex' : 'none'}} onClick={() => {
+        setShowMenu(false);
+      }}><Nav/></div>
     </div>
   );
 };
