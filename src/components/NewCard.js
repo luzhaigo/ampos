@@ -11,7 +11,7 @@ function transformDate(date) {
 
 const NewCard = ({ width, newObj }) => {
   return (
-    <div className={styles.card} style={{width}}>
+    <a className={styles.card} style={{width}} href={newObj.url}>
       <div className={styles.mobile_img}>
         <img src={newObj.urlToImage} alt={newObj.description}/>
       </div>
@@ -21,7 +21,7 @@ const NewCard = ({ width, newObj }) => {
         <div className={styles.content}>{newObj.content}</div>
         <div className={styles.date}>Updated: {transformDate(newObj.publishedAt)}</div>
       </div>
-    </div>
+    </a>
   );
 }
 
