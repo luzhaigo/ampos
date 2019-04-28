@@ -1,0 +1,27 @@
+#order_list {
+  width: 700px;
+  margin: auto;
+  .wrapper {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #order_list {
+    width: 80vw;
+  }
+  .message {
+    font-size: 24px;
+    text-align: center;
+  }
+}
