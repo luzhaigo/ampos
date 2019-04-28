@@ -2,9 +2,10 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import {connect} from 'react-redux';
 import styles from 'components/NewsList.module.scss';
 import NewCard from 'components/NewCard';
+import Loading from 'components/Loading';
 import {getNews} from 'actions';
 
-const NewsList = ({articles, getNews}) => {
+const NewsList = ({articles, getNews, request, error}) => {
   const [cardWidth, setCardWidth] = useState(undefined);
   const listRef = useRef(null);
   const measuredRef = useCallback(node => {
@@ -36,11 +37,17 @@ const NewsList = ({articles, getNews}) => {
     window.addEventListener('resize', resizeFunc);
     return () => window.removeEventListener('resize', resizeFunc);
   }, []); // eslint-disable-line
-  
+
   return (
     <div className={styles.list} ref={measuredRef}>
       {
         articles.map((newObj, index) => <NewCard key={index} newObj={newObj} width={cardWidth}/>)
+      }
+      {
+        request && <Loading/>
+      }
+      {
+        error && <div className={styles.error}>Oops! Get News Failed!</div>
       }
     </div>
   );
@@ -48,6 +55,8 @@ const NewsList = ({articles, getNews}) => {
 
 const mapStateToProps = (state) => ({
   articles: state.news.articles,
+  request: state.news.request,
+  error: state.news.error,
 });
 
 export default connect(mapStateToProps, {getNews})(NewsList);
