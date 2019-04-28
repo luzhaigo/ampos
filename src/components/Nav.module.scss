@@ -11,7 +11,8 @@
     padding: 0;
     margin: 0;
     li {
-      width: 150px;
+      min-width: 80px;
+      width: calc(100% / 8);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,7 +35,7 @@
     ul {
       flex-flow: column;
       li {
-        padding: 20px 0;
+        padding: 20px;
         border-bottom: 1px solid #c3c3c3;
       }
     }
