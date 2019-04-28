@@ -4,7 +4,7 @@ import styles from 'components/NewsList.module.scss';
 import NewCard from 'components/NewCard';
 import {getNews} from 'actions';
 
-const NewsList = ({articles, getNews, page}) => {
+const NewsList = ({articles, getNews}) => {
   const [cardWidth, setCardWidth] = useState(0);
   const listRef = useRef(null);
   const measuredRef = useCallback(node => {
@@ -16,7 +16,8 @@ const NewsList = ({articles, getNews, page}) => {
     }
   }, []);
   useEffect(() => {
-    getNews(1);
+    if (!articles.length)
+      getNews(1);
     const resizeFunc = () => {
       const width = listRef.current.getBoundingClientRect().width;
       const cardWidth = (width - 80) / 3;

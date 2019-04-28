@@ -5,6 +5,7 @@ import styles from './App.module.scss';
 import Search from 'components/Search';
 import News from 'pages/News';
 import Footer from 'components/Footer';
+import Home from 'pages/Home';
 
 const App = () => {
 
@@ -14,7 +15,8 @@ const App = () => {
         <Header/>
         <div className={styles.search}><Search/></div>
         <div className={styles.appbody}>
-          <Route path="/" component={News}/>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/news" component={News}/>
           <Route exact path="/regions"/>
           <Route exact path="/video"/>
           <Route exact path="/tv"/>
