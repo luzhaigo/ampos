@@ -8,6 +8,7 @@
   .appbody {
     flex: 1;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   @media screen and (max-width: 600px){
     .search {

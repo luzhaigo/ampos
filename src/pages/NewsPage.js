@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'pages/News.module.scss';
+import styles from 'pages/NewsPage.module.scss';
 import LoadMoreButton from 'components/LoadMoreButton';
 import NewsList from 'components/NewsList';
 
