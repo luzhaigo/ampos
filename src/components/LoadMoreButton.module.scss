@@ -5,3 +5,9 @@
   font-weight: bold;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  .loadmore {
+    margin: 10px 5px;
+  }
+}

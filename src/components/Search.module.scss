@@ -25,3 +25,19 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .search {
+    background-color: #c3c3c3;
+    padding: 5px 10px;
+    label {
+      background-color: white;
+      input {
+        color: grey;
+        &::placeholder {
+          color: grey;
+        }
+      }
+    }
+  }
+}

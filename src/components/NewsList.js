@@ -5,13 +5,18 @@ import NewCard from 'components/NewCard';
 import {getNews} from 'actions';
 
 const NewsList = ({articles, getNews}) => {
-  const [cardWidth, setCardWidth] = useState(0);
+  const [cardWidth, setCardWidth] = useState(undefined);
   const listRef = useRef(null);
   const measuredRef = useCallback(node => {
     if (node !== null) {
       listRef.current = node;
       const width = node.getBoundingClientRect().width;
-      const cardWidth = (width - 80) / 3;
+      let cardWidth;
+      if (window.innerWidth < 600) {
+        cardWidth = undefined;
+      } else {
+        cardWidth = (width - 80) / 3;
+      }
       setCardWidth(cardWidth);
     }
   }, []);
@@ -20,7 +25,12 @@ const NewsList = ({articles, getNews}) => {
       getNews(1);
     const resizeFunc = () => {
       const width = listRef.current.getBoundingClientRect().width;
-      const cardWidth = (width - 80) / 3;
+      let cardWidth;
+      if (window.innerWidth < 600) {
+        cardWidth = undefined;
+      } else {
+        cardWidth = (width - 80) / 3;
+      }
       setCardWidth(cardWidth);
     };
     window.addEventListener('resize', resizeFunc);

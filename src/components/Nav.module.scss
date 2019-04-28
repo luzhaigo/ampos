@@ -25,7 +25,17 @@
       }
     }
   }
-  @media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    ul {
+      flex-flow: column;
+      li {
+        padding: 10px 0;
+        border-bottom: 1px solid #c3c3c3;
+      }
+    }
     .search {
       display: none;
     }
