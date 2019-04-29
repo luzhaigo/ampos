@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Header from 'components/Header';
 import styles from './App.module.scss';
 import Search from 'components/Search';
@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className={styles.App}>
-      <BrowserRouter basename="/ampos">
+      <HashRouter>
         <Header/>
         <div className={styles.search}><Search/></div>
         <div className={styles.appbody}>
@@ -25,7 +25,7 @@ const App = () => {
           <Route exact path="/tv" component={TV}/>
           <Footer/>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
