@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e4278158be96da42fab6d46a66b60e53",
+    "revision": "44160760ee1fb88dfe0c2569843d925b",
     "url": "/ampos/index.html"
   },
   {
-    "revision": "678fb4cf95ce456a340d",
-    "url": "/ampos/static/css/main.1225f49c.chunk.css"
+    "revision": "48d33149d18a3ac86b39",
+    "url": "/ampos/static/css/main.f8e757e4.chunk.css"
   },
   {
-    "revision": "01c4fa056986fc2f6fce",
-    "url": "/ampos/static/js/2.7e341152.chunk.js"
+    "revision": "8998543f32d8167d1a8c",
+    "url": "/ampos/static/js/2.bb188cb1.chunk.js"
   },
   {
-    "revision": "678fb4cf95ce456a340d",
-    "url": "/ampos/static/js/main.80e1acfc.chunk.js"
+    "revision": "48d33149d18a3ac86b39",
+    "url": "/ampos/static/js/main.723c54bd.chunk.js"
   },
   {
     "revision": "e9b554db124e89022653",
@@ -32,7 +32,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ampos/static/media/menu.6fc8f024.svg"
   },
   {
-    "revision": "5e78853359f5b20fd5b93ff33386830b",
-    "url": "/ampos/static/media/search.5e788533.svg"
+    "revision": "d14ecbb2d34d0bd8e04b1ef7a9b94f21",
+    "url": "/ampos/static/media/search_grey.d14ecbb2.svg"
+  },
+  {
+    "revision": "ce4aad0f7f7b9ef8f81d06b7deab083c",
+    "url": "/ampos/static/media/search_white.ce4aad0f.svg"
   }
 ]);
