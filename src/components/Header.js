@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from 'components/Nav';
 import styles from 'components/Header.module.scss';
 import menuImg from 'assets/menu.svg';
@@ -8,7 +9,7 @@ const Header = () => {
 
   return (
     <div id={styles.header}>
-      <div id={styles.logo}>Logo</div>
+      <Link to="/news" id={styles.logo}>Logo</Link>
       <div className={styles.title}>News</div>
       <button className={styles.menu} onClick={() => {
         setShowMenu(!showMenu);
