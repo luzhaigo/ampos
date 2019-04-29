@@ -1,7 +1,24 @@
-# DailyDrinks
+# Ampos
 
-- You can access the DailyDrinks by this url https://luzhaigo.github.io/dailydrinks/
-- RWD, you can access the web app by smartphone.
+- You can access the Ampos web app by this url https://luzhaigo.github.io/ampos/.
+- `RWD`, you can access the web app by smartphone.
+- Click load more button to get other 15 news.
+- Support `searching`.
+- Multiple pages. ex: News, Regions, Video, TV pages.
+- By clicking each news card, the page will be redirected to news website.
+- By clicking `logo`, the page will be redirected to news page.
+- UI of `loading` status for API requests.
+- Error handling for API request failed.
+
+## Docker
+
+You can boot up the web app by:
+
+### docker run --name ampos -p 3000:80 yaf20030918/ampos
+
+To remove ampose container:
+
+### docker rm -f ampos
 
 ## Available Scripts
 
