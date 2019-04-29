@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/ampos/static/css/main.1225f49c.chunk.css",
+    "main.js": "/ampos/static/js/main.0f9798db.chunk.js",
+    "main.js.map": "/ampos/static/js/main.0f9798db.chunk.js.map",
+    "runtime~main.js": "/ampos/static/js/runtime~main.3d3ac8d5.js",
+    "runtime~main.js.map": "/ampos/static/js/runtime~main.3d3ac8d5.js.map",
+    "static/js/2.b6dd9447.chunk.js": "/ampos/static/js/2.b6dd9447.chunk.js",
+    "static/js/2.b6dd9447.chunk.js.map": "/ampos/static/js/2.b6dd9447.chunk.js.map",
+    "index.html": "/ampos/index.html",
+    "precache-manifest.6e16eca2fc1f022bda87c461ea672592.js": "/ampos/precache-manifest.6e16eca2fc1f022bda87c461ea672592.js",
+    "service-worker.js": "/ampos/service-worker.js",
+    "static/css/main.1225f49c.chunk.css.map": "/ampos/static/css/main.1225f49c.chunk.css.map",
+    "static/media/img_not_found.png": "/ampos/static/media/img_not_found.a5c60335.png",
+    "static/media/loading.svg": "/ampos/static/media/loading.6062da51.svg",
+    "static/media/menu.svg": "/ampos/static/media/menu.6fc8f024.svg",
+    "static/media/search.svg": "/ampos/static/media/search.5e788533.svg"
+  }
+}

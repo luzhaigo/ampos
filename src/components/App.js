@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className={styles.App}>
-      <BrowserRouter>
+      <BrowserRouter basename="/ampos">
         <Header/>
         <div className={styles.search}><Search/></div>
         <div className={styles.appbody}>
