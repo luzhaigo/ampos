@@ -22,6 +22,13 @@ export default (state = initialState, action) => {
       }
     }
     case GET_NEWS: {
+      if (action.error) {
+        return {
+          ...state,
+          request: false,
+          error: !!action.error
+        };
+      }
       return {
         ...state,
         articles: [...state.articles, ...action.payload.data.articles],
