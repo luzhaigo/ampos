@@ -14,11 +14,11 @@
 
 You can boot up the web app by:
 
-### docker run --name ampos -p 3000:80 yaf20030918/ampos
+### `docker run --name ampos -p 3000:80 yaf20030918/ampos`
 
 To remove ampose container:
 
-### docker rm -f ampos
+### `docker rm -f ampos`
 
 ## Available Scripts
 
