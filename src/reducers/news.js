@@ -1,9 +1,18 @@
 import {
   GET_NEWS,
   GET_NEWS_REQUEST,
+  QUERY_NEWS,
 } from 'actions/types';
 
-export default (state = {articles: [], page: 1, request: false, error: false}, action) => {
+const initialState = {
+  articles: [],
+  page: 1,
+  request: false,
+  error: false,
+  query: '',
+}
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case GET_NEWS_REQUEST: {
       return {
@@ -20,6 +29,14 @@ export default (state = {articles: [], page: 1, request: false, error: false}, a
         request: false,
         error: !!action.error,
       };
+    }
+    case QUERY_NEWS: {
+      return {
+        ...state,
+        page: 1,
+        articles: [],
+        query: action.query,
+      }
     }
     default:
       return state;

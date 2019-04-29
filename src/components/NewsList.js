@@ -1,9 +1,11 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import {connect} from 'react-redux';
 import styles from 'components/NewsList.module.scss';
-import NewCard from 'components/NewCard';
+import _NewCard from 'components/NewCard';
 import Loading from 'components/Loading';
 import {getNews} from 'actions';
+
+const NewCard = React.memo(_NewCard);
 
 const NewsList = ({articles, getNews, request, error}) => {
   const [cardWidth, setCardWidth] = useState(undefined);
@@ -23,7 +25,7 @@ const NewsList = ({articles, getNews, request, error}) => {
   }, []);
   useEffect(() => {
     if (!articles.length)
-      getNews(1);
+      getNews();
     const resizeFunc = () => {
       const width = listRef.current.getBoundingClientRect().width;
       let cardWidth;

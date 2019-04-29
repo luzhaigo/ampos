@@ -4,12 +4,11 @@ import styles from 'components/LoadMoreButton.module.scss';
 import {getNews} from 'actions';
 
 
-const LoadMoreButton = ({page, getNews}) => {
+const LoadMoreButton = ({ getNews }) => {
   return <button className={styles.loadmore} onClick={() => {
-    getNews(page);
+    getNews();
   }}>Load More</button>;
 }
 
-const mapStatetoProps = state => ({page: state.news.page});
 
-export default connect(mapStatetoProps, {getNews})(LoadMoreButton);
+export default connect(null, {getNews})(LoadMoreButton);
