@@ -4,7 +4,7 @@ import {
   QUERY_NEWS,
 } from 'actions/types';
 
-const initialState = {
+export const initialState = {
   articles: [],
   page: 1,
   request: false,

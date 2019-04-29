@@ -1,56 +1,46 @@
-import { addOrderItems, updateOrderItemByIndex, deleteOrderItemByIndex } from 'actions';
-import { ADD_ORDER_ITEMS, UPDATE_ORDER_ITEM, DELETE_ORDER_ITEM } from 'actions/types';
+import {
+  getNews,
+  queryNews,
+} from 'actions';
+import {
+  GET_NEWS,
+  GET_NEWS_REQUEST,
+  QUERY_NEWS
+} from 'actions/types';
 
-describe('addOrderItems', () => {
+describe('queryNews', () => {
   it('has the correct type', () => {
-    const action = addOrderItems();
+    const action = queryNews();
 
-    expect(action.type).toEqual(ADD_ORDER_ITEMS);
+    expect(action.type).toEqual(QUERY_NEWS);
   });
 
   it('has the correct payload', () => {
-    const action = addOrderItems([]);
+    const action = queryNews('q');
 
     expect(action).toEqual({
-      type: ADD_ORDER_ITEMS,
-      payload: [],
+      type: QUERY_NEWS,
+      query: 'q',
     });
   });
 });
 
-describe('updateOrderItemByIndex', () => {
-  it('has the correct type', () => {
-    const action = updateOrderItemByIndex();
+// describe('getNews', () => {
+//   it('has the correct type', () => {
+//     const action = getNews();
 
-    expect(action.type).toEqual(UPDATE_ORDER_ITEM);
-  });
+//     expect(action.type).toEqual(UPDATE_ORDER_ITEM);
+//   });
 
-  it('has the correct payload', () => {
-    const action = updateOrderItemByIndex(0, {});
+//   it('has the correct payload', () => {
+//     const action = updateOrderItemByIndex(0, {});
 
-    expect(action).toEqual({
-      type: UPDATE_ORDER_ITEM,
-      payload: {
-        index: 0,
-        item: {},
-      },
-    });
-  });
-});
-
-describe('deleteOrderItemByIndex', () => {
-  it('has the correct type', () => {
-    const action = deleteOrderItemByIndex();
-
-    expect(action.type).toEqual(DELETE_ORDER_ITEM);
-  });
-
-  it('has the correct payload', () => {
-    const action = deleteOrderItemByIndex(0);
-
-    expect(action).toEqual({
-      type: DELETE_ORDER_ITEM,
-      payload: 0,
-    });
-  });
-});
+//     expect(action).toEqual({
+//       type: UPDATE_ORDER_ITEM,
+//       payload: {
+//         index: 0,
+//         item: {},
+//       },
+//     });
+//   });
+// });

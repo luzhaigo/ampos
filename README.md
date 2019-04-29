@@ -9,6 +9,7 @@
 - By clicking `logo`, the page will be redirected to news page.
 - UI of `loading` status for API requests.
 - Error handling for API request failed.
+- Unit Tests.
 
 ## Docker
 
