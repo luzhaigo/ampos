@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e4b874f4f35a01227ea10ffbc380f011",
+    "revision": "e4278158be96da42fab6d46a66b60e53",
     "url": "/ampos/index.html"
   },
   {
-    "revision": "61b760056d6e6409afbd",
+    "revision": "678fb4cf95ce456a340d",
     "url": "/ampos/static/css/main.1225f49c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ampos/static/js/2.7e341152.chunk.js"
   },
   {
-    "revision": "61b760056d6e6409afbd",
-    "url": "/ampos/static/js/main.5547c2bf.chunk.js"
+    "revision": "678fb4cf95ce456a340d",
+    "url": "/ampos/static/js/main.80e1acfc.chunk.js"
   },
   {
     "revision": "e9b554db124e89022653",
